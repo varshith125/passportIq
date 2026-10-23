@@ -1,0 +1,1671 @@
+{
+  "male_2.jpg": {
+    "status": "partial",
+    "classification": "passport_td3",
+    "active_engine": "rapidocr_onnxruntime",
+    "detected_blocks_count": 13,
+    "mean_confidence": 0.9073,
+    "duration_ms": 9930.94,
+    "resized": true,
+    "fields": {
+      "document_type": {
+        "field_name": "document_type",
+        "label": "Document Type",
+        "value": "P",
+        "raw_evidence": "MRZ:P",
+        "source": "mrz",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.8255,
+        "reconciliation_status": "mrz_only",
+        "mrz_value": "P",
+        "viz_value": null,
+        "notes": [
+          "Document header or type label not detected."
+        ]
+      },
+      "issuing_country": {
+        "field_name": "issuing_country",
+        "label": "Issuing Country / Authority",
+        "value": "USA",
+        "raw_evidence": "MRZ:USA | VIZ:USA",
+        "source": "reconciled",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9007,
+        "reconciliation_status": "matched",
+        "mrz_value": "USA",
+        "viz_value": "USA",
+        "notes": [
+          "Extracted from standard ISO country code in VIZ."
+        ]
+      },
+      "surname": {
+        "field_name": "surname",
+        "label": "Surname",
+        "value": "LOPEZ",
+        "raw_evidence": "MRZ:LOPEZ | VIZ:LOPEZ",
+        "source": "reconciled",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.8603,
+        "reconciliation_status": "matched",
+        "mrz_value": "LOPEZ",
+        "viz_value": "LOPEZ",
+        "notes": [
+          "Extracted via standard passport layout (top name line)."
+        ]
+      },
+      "given_names": {
+        "field_name": "given_names",
+        "label": "Given Names",
+        "value": "OSHA",
+        "raw_evidence": "MRZ:OSHA | VIZ:JOSHUA",
+        "source": "mrz",
+        "validation_state": "conflict",
+        "ocr_confidence": 0.908,
+        "reconciliation_status": "mismatch",
+        "mrz_value": "OSHA",
+        "viz_value": "JOSHUA",
+        "notes": [
+          "Extracted via standard passport layout (second name line).",
+          "Discrepancy detected: MRZ parsed 'OSHA' while VIZ extracted 'JOSHUA'."
+        ]
+      },
+      "full_name": {
+        "field_name": "full_name",
+        "label": "Full Name",
+        "value": "OSHA LOPEZ",
+        "raw_evidence": "MRZ:OSHA LOPEZ | VIZ:JOSHUA LOPEZ",
+        "source": "mrz",
+        "validation_state": "conflict",
+        "ocr_confidence": 0.8841,
+        "reconciliation_status": "mismatch",
+        "mrz_value": "OSHA LOPEZ",
+        "viz_value": "JOSHUA LOPEZ",
+        "notes": [
+          "Derived from VIZ given_names and surname.",
+          "Discrepancy detected: MRZ parsed 'OSHA LOPEZ' while VIZ extracted 'JOSHUA LOPEZ'."
+        ]
+      },
+      "passport_number": {
+        "field_name": "passport_number",
+        "label": "Passport Number",
+        "value": "K38542916",
+        "raw_evidence": "MRZ:K38542916 | VIZ:K38542916",
+        "source": "reconciled",
+        "validation_state": "valid_check_digit",
+        "ocr_confidence": 0.9117,
+        "reconciliation_status": "matched",
+        "mrz_value": "K38542916",
+        "viz_value": "K38542916",
+        "notes": [
+          "Extracted from standalone passport number format in VIZ."
+        ]
+      },
+      "nationality": {
+        "field_name": "nationality",
+        "label": "Nationality",
+        "value": "USA",
+        "raw_evidence": "MRZ:USA | VIZ:USA",
+        "source": "reconciled",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9007,
+        "reconciliation_status": "matched",
+        "mrz_value": "USA",
+        "viz_value": "USA",
+        "notes": [
+          "Extracted from standard ISO country code in VIZ."
+        ]
+      },
+      "date_of_birth": {
+        "field_name": "date_of_birth",
+        "label": "Date of Birth",
+        "value": "1973-09-08",
+        "raw_evidence": "MRZ:1973-09-08 | VIZ:08SEP1973",
+        "source": "reconciled",
+        "validation_state": "valid_check_digit",
+        "ocr_confidence": 0.8748,
+        "reconciliation_status": "matched",
+        "mrz_value": "1973-09-08",
+        "viz_value": "1973-09-08",
+        "notes": [
+          "Extracted via standard passport layout (positioned above place of birth)."
+        ]
+      },
+      "sex": {
+        "field_name": "sex",
+        "label": "Sex",
+        "value": "M",
+        "raw_evidence": "VIZ:M",
+        "source": "viz",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9523,
+        "reconciliation_status": "viz_only",
+        "mrz_value": null,
+        "viz_value": "M",
+        "notes": [
+          "Extracted via standard passport layout (anchored adjacent to date of birth)."
+        ]
+      },
+      "date_of_expiry": {
+        "field_name": "date_of_expiry",
+        "label": "Date of Expiry",
+        "value": "2034-01-06",
+        "raw_evidence": "MRZ:2034-01-06 | VIZ:06JAN2034",
+        "source": "reconciled",
+        "validation_state": "valid_check_digit",
+        "ocr_confidence": 0.9069,
+        "reconciliation_status": "matched",
+        "mrz_value": "2034-01-06",
+        "viz_value": "2034-01-06",
+        "notes": [
+          "Extracted as future date below place of birth (expiry)."
+        ]
+      },
+      "date_of_issue": {
+        "field_name": "date_of_issue",
+        "label": "Date of Issue",
+        "value": null,
+        "raw_evidence": null,
+        "source": "unavailable",
+        "validation_state": "missing",
+        "ocr_confidence": null,
+        "reconciliation_status": "not_checked",
+        "mrz_value": null,
+        "viz_value": null,
+        "notes": [
+          "Date of issue label or candidate not detected."
+        ]
+      },
+      "place_of_birth": {
+        "field_name": "place_of_birth",
+        "label": "Place of Birth",
+        "value": "NEW YORK, USA",
+        "raw_evidence": "VIZ:NEW YORK.USA",
+        "source": "viz",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9062,
+        "reconciliation_status": "not_checked",
+        "mrz_value": null,
+        "viz_value": "NEW YORK, USA",
+        "notes": [
+          "Extracted from place of birth format in VIZ."
+        ]
+      },
+      "personal_number": {
+        "field_name": "personal_number",
+        "label": "Personal / Optional Number",
+        "value": null,
+        "raw_evidence": null,
+        "source": "unavailable",
+        "validation_state": "missing",
+        "ocr_confidence": null,
+        "reconciliation_status": "insufficient_data",
+        "mrz_value": null,
+        "viz_value": null,
+        "notes": [
+          "Optional personal number label not detected."
+        ]
+      }
+    },
+    "mrz": {
+      "detected": true,
+      "format": "MrzFormat.TD3",
+      "all_check_digits_valid": false,
+      "mrz_text": "P<USALOPEZ<<OSHA<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nK385429168USA7309089N3401066<<<<<<<<<<<<<<<<",
+      "errors": [
+        "Line 2 length is 32 characters; expected 44 for TD3.",
+        "MRZ check-digit failure on 'composite': expected '4', got '<'.",
+        "Invalid sex marker 'N' at TD3 Line 2 [21]."
+      ],
+      "raw_lines": [
+        "P<USALOPE2<<OSHA<<<<<<<<<<<<",
+        "K385429168USA7309089N3401066<<<<"
+      ]
+    },
+    "reconciliation": {
+      "overall_status": "mismatch",
+      "matched_count": 6,
+      "compared_fields_count": 8,
+      "mismatch_count": 2
+    },
+    "ocr_blocks": [
+      {
+        "index": 0,
+        "confidence": 0.8126,
+        "bbox": [
+          1479.0322265625,
+          746.57080078125,
+          1861.290283203125,
+          877.941650390625
+        ],
+        "text": "THE UNTIED STNEES OFAMECRICA"
+      },
+      {
+        "index": 1,
+        "confidence": 0.8446,
+        "bbox": [
+          1683.8709716796875,
+          740.1624755859375,
+          1816.1290283203125,
+          796.2354125976562
+        ],
+        "text": "FIRMADELTTULAR"
+      },
+      {
+        "index": 2,
+        "confidence": 0.976,
+        "bbox": [
+          1322.5806884765625,
+          760.9895629882812,
+          1411.290283203125,
+          813.8583374023438
+        ],
+        "text": "USA"
+      },
+      {
+        "index": 3,
+        "confidence": 0.8951,
+        "bbox": [
+          1446.774169921875,
+          820.2666625976562,
+          1522.5806884765625,
+          863.5228881835938
+        ],
+        "text": "LOPEZ"
+      },
+      {
+        "index": 4,
+        "confidence": 0.9904,
+        "bbox": [
+          1443.54833984375,
+          844.2979125976562,
+          1527.4193115234375,
+          895.5645751953125
+        ],
+        "text": "JOSHUA"
+      },
+      {
+        "index": 5,
+        "confidence": 0.9978,
+        "bbox": [
+          1664.51611328125,
+          841.09375,
+          1788.709716796875,
+          903.5750122070312
+        ],
+        "text": "K38542916"
+      },
+      {
+        "index": 6,
+        "confidence": 0.924,
+        "bbox": [
+          1453.225830078125,
+          901.972900390625,
+          1569.3548583984375,
+          962.85205078125
+        ],
+        "text": "08SEP1973"
+      },
+      {
+        "index": 7,
+        "confidence": 0.9523,
+        "bbox": [
+          1456.45166015625,
+          935.6166381835938,
+          1487.0968017578125,
+          961.25
+        ],
+        "text": "M"
+      },
+      {
+        "index": 8,
+        "confidence": 0.9062,
+        "bbox": [
+          1441.935546875,
+          946.8312377929688,
+          1596.774169921875,
+          1018.9249877929688
+        ],
+        "text": "NEW YORK.USA"
+      },
+      {
+        "index": 9,
+        "confidence": 0.9883,
+        "bbox": [
+          1433.8709716796875,
+          999.7000122070312,
+          1550.0,
+          1055.77294921875
+        ],
+        "text": "06JAN2034"
+      },
+      {
+        "index": 10,
+        "confidence": 0.9243,
+        "bbox": [
+          1425.8065185546875,
+          1022.129150390625,
+          1659.677490234375,
+          1110.2437744140625
+        ],
+        "text": "UNITEDSTATESDEPARTNENTOFSTATE"
+      },
+      {
+        "index": 11,
+        "confidence": 0.5888,
+        "bbox": [
+          1251.6129150390625,
+          1031.74169921875,
+          1769.3548583984375,
+          1191.949951171875
+        ],
+        "text": "K3854291680573090893401066<<<<<04"
+      },
+      {
+        "index": 12,
+        "confidence": 0.9946,
+        "bbox": [
+          1783.8709716796875,
+          1121.4583740234375,
+          2598.38720703125,
+          1489.9375
+        ],
+        "text": "ata"
+      }
+    ]
+  },
+  "female_1.jpg": {
+    "status": "partial",
+    "classification": "passport_td3",
+    "active_engine": "rapidocr_onnxruntime",
+    "detected_blocks_count": 16,
+    "mean_confidence": 0.9463,
+    "duration_ms": 10013.89,
+    "resized": true,
+    "fields": {
+      "document_type": {
+        "field_name": "document_type",
+        "label": "Document Type",
+        "value": "P",
+        "raw_evidence": "MRZ:P",
+        "source": "mrz",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9482,
+        "reconciliation_status": "mrz_only",
+        "mrz_value": "P",
+        "viz_value": null,
+        "notes": [
+          "Document header or type label not detected."
+        ]
+      },
+      "issuing_country": {
+        "field_name": "issuing_country",
+        "label": "Issuing Country / Authority",
+        "value": "USA",
+        "raw_evidence": "MRZ:USA | VIZ:USA",
+        "source": "reconciled",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9494,
+        "reconciliation_status": "matched",
+        "mrz_value": "USA",
+        "viz_value": "USA",
+        "notes": [
+          "Extracted from standard ISO country code in VIZ."
+        ]
+      },
+      "surname": {
+        "field_name": "surname",
+        "label": "Surname",
+        "value": "FLORES",
+        "raw_evidence": "MRZ:FLORES | VIZ:LORES",
+        "source": "mrz",
+        "validation_state": "conflict",
+        "ocr_confidence": 0.9664,
+        "reconciliation_status": "mismatch",
+        "mrz_value": "FLORES",
+        "viz_value": "LORES",
+        "notes": [
+          "Extracted via standard passport layout (top name line).",
+          "Discrepancy detected: MRZ parsed 'FLORES' while VIZ extracted 'LORES'."
+        ]
+      },
+      "given_names": {
+        "field_name": "given_names",
+        "label": "Given Names",
+        "value": "KATHERINE",
+        "raw_evidence": "MRZ:KATHERINE | VIZ:KATHERINE",
+        "source": "reconciled",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9707,
+        "reconciliation_status": "matched",
+        "mrz_value": "KATHERINE",
+        "viz_value": "KATHERINE",
+        "notes": [
+          "Extracted via standard passport layout (second name line)."
+        ]
+      },
+      "full_name": {
+        "field_name": "full_name",
+        "label": "Full Name",
+        "value": "KATHERINE FLORES",
+        "raw_evidence": "MRZ:KATHERINE FLORES | VIZ:KATHERINE LORES",
+        "source": "mrz",
+        "validation_state": "conflict",
+        "ocr_confidence": 0.9685,
+        "reconciliation_status": "mismatch",
+        "mrz_value": "KATHERINE FLORES",
+        "viz_value": "KATHERINE LORES",
+        "notes": [
+          "Derived from VIZ given_names and surname.",
+          "Discrepancy detected: MRZ parsed 'KATHERINE FLORES' while VIZ extracted 'KATHERINE LORES'."
+        ]
+      },
+      "passport_number": {
+        "field_name": "passport_number",
+        "label": "Passport Number",
+        "value": "N92904419",
+        "raw_evidence": "VIZ:N92904419",
+        "source": "viz",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9982,
+        "reconciliation_status": "viz_only",
+        "mrz_value": null,
+        "viz_value": "N92904419",
+        "notes": [
+          "Extracted from standalone passport number format in VIZ."
+        ]
+      },
+      "nationality": {
+        "field_name": "nationality",
+        "label": "Nationality",
+        "value": "USA",
+        "raw_evidence": "MRZ:USA | VIZ:USA",
+        "source": "reconciled",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9494,
+        "reconciliation_status": "matched",
+        "mrz_value": "USA",
+        "viz_value": "USA",
+        "notes": [
+          "Extracted from standard ISO country code in VIZ."
+        ]
+      },
+      "date_of_birth": {
+        "field_name": "date_of_birth",
+        "label": "Date of Birth",
+        "value": "1960-08-04",
+        "raw_evidence": "VIZ:04AUG1960",
+        "source": "viz",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9917,
+        "reconciliation_status": "viz_only",
+        "mrz_value": null,
+        "viz_value": "1960-08-04",
+        "notes": [
+          "Extracted via standard passport layout (positioned above place of birth)."
+        ]
+      },
+      "sex": {
+        "field_name": "sex",
+        "label": "Sex",
+        "value": null,
+        "raw_evidence": null,
+        "source": "unavailable",
+        "validation_state": "missing",
+        "ocr_confidence": null,
+        "reconciliation_status": "insufficient_data",
+        "mrz_value": null,
+        "viz_value": null,
+        "notes": [
+          "Sex marker label not detected and no reliable layout position found."
+        ]
+      },
+      "date_of_expiry": {
+        "field_name": "date_of_expiry",
+        "label": "Date of Expiry",
+        "value": "2035-08-03",
+        "raw_evidence": "VIZ:03AUG2035",
+        "source": "viz",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.996,
+        "reconciliation_status": "viz_only",
+        "mrz_value": null,
+        "viz_value": "2035-08-03",
+        "notes": [
+          "Extracted via standard passport layout (later date below place of birth)."
+        ]
+      },
+      "date_of_issue": {
+        "field_name": "date_of_issue",
+        "label": "Date of Issue",
+        "value": "2025-08-03",
+        "raw_evidence": "VIZ:03AUG2025",
+        "source": "viz",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9935,
+        "reconciliation_status": "not_checked",
+        "mrz_value": null,
+        "viz_value": "2025-08-03",
+        "notes": [
+          "Extracted via standard passport layout (earlier date below place of birth)."
+        ]
+      },
+      "place_of_birth": {
+        "field_name": "place_of_birth",
+        "label": "Place of Birth",
+        "value": "NEWJERSEY, USA",
+        "raw_evidence": "VIZ:NEWJERSEY.USA",
+        "source": "viz",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9483,
+        "reconciliation_status": "not_checked",
+        "mrz_value": null,
+        "viz_value": "NEWJERSEY, USA",
+        "notes": [
+          "Extracted from place of birth format in VIZ."
+        ]
+      },
+      "personal_number": {
+        "field_name": "personal_number",
+        "label": "Personal / Optional Number",
+        "value": null,
+        "raw_evidence": null,
+        "source": "unavailable",
+        "validation_state": "missing",
+        "ocr_confidence": null,
+        "reconciliation_status": "insufficient_data",
+        "mrz_value": null,
+        "viz_value": null,
+        "notes": [
+          "Optional personal number label not detected."
+        ]
+      }
+    },
+    "mrz": {
+      "detected": true,
+      "format": "None",
+      "all_check_digits_valid": false,
+      "mrz_text": "P<USAFLORES<<KATHERINE<<<<<<<<",
+      "errors": [
+        "Incomplete MRZ candidate: only 1 MRZ-like line detected (length 30).",
+        "Incomplete TD3 MRZ candidate: Line 1 was detected, but Line 2 is blurred, damaged, or obscured."
+      ],
+      "raw_lines": [
+        "P<USAFLORES<<KATHERINE<<<<<<<<"
+      ]
+    },
+    "reconciliation": {
+      "overall_status": "mismatch",
+      "matched_count": 3,
+      "compared_fields_count": 5,
+      "mismatch_count": 2
+    },
+    "ocr_blocks": [
+      {
+        "index": 0,
+        "confidence": 0.9573,
+        "bbox": [
+          916.1290283203125,
+          0.0,
+          2646.774169921875,
+          523.2349853515625
+        ],
+        "text": "Inidata"
+      },
+      {
+        "index": 1,
+        "confidence": 0.9766,
+        "bbox": [
+          595.1613159179688,
+          455.6169128417969,
+          1346.774169921875,
+          941.8229370117188
+        ],
+        "text": "Un"
+      },
+      {
+        "index": 2,
+        "confidence": 0.6649,
+        "bbox": [
+          1830.6451416015625,
+          455.6169128417969,
+          1880.6451416015625,
+          581.1932983398438
+        ],
+        "text": "中062"
+      },
+      {
+        "index": 3,
+        "confidence": 0.9928,
+        "bbox": [
+          1812.9031982421875,
+          491.035888671875,
+          2620.9677734375,
+          953.0926513671875
+        ],
+        "text": "ata"
+      },
+      {
+        "index": 4,
+        "confidence": 0.917,
+        "bbox": [
+          1488.709716796875,
+          709.9896240234375,
+          1872.5806884765625,
+          737.3588256835938
+        ],
+        "text": "THEUNITED STNTESOFAMERICA"
+      },
+      {
+        "index": 5,
+        "confidence": 0.9506,
+        "bbox": [
+          1333.8709716796875,
+          756.6782836914062,
+          1412.9031982421875,
+          790.4873046875
+        ],
+        "text": "USA"
+      },
+      {
+        "index": 6,
+        "confidence": 0.9982,
+        "bbox": [
+          1693.54833984375,
+          753.4583740234375,
+          1816.1290283203125,
+          785.6574096679688
+        ],
+        "text": "N92904419"
+      },
+      {
+        "index": 7,
+        "confidence": 0.9845,
+        "bbox": [
+          1482.258056640625,
+          793.7072143554688,
+          1533.8709716796875,
+          809.8067626953125
+        ],
+        "text": "LORES"
+      },
+      {
+        "index": 8,
+        "confidence": 0.9931,
+        "bbox": [
+          1477.4193115234375,
+          816.24658203125,
+          1567.741943359375,
+          838.785888671875
+        ],
+        "text": "KATHERINE"
+      },
+      {
+        "index": 9,
+        "confidence": 0.9917,
+        "bbox": [
+          1500.0,
+          866.1551513671875,
+          1611.290283203125,
+          898.3541870117188
+        ],
+        "text": "04AUG1960"
+      },
+      {
+        "index": 10,
+        "confidence": 0.9103,
+        "bbox": [
+          564.51611328125,
+          883.8646240234375,
+          2650.0,
+          1389.39013671875
+        ],
+        "text": "Uniaata"
+      },
+      {
+        "index": 11,
+        "confidence": 0.9483,
+        "bbox": [
+          1500.0,
+          914.4537353515625,
+          1661.290283203125,
+          946.65283203125
+        ],
+        "text": "NEWJERSEY.USA"
+      },
+      {
+        "index": 12,
+        "confidence": 0.9935,
+        "bbox": [
+          1500.0,
+          941.8229370117188,
+          1616.1290283203125,
+          974.0220336914062
+        ],
+        "text": "03AUG2025"
+      },
+      {
+        "index": 13,
+        "confidence": 0.996,
+        "bbox": [
+          1500.0,
+          967.5822143554688,
+          1612.9031982421875,
+          999.7813110351562
+        ],
+        "text": "03AUG2035"
+      },
+      {
+        "index": 14,
+        "confidence": 0.9132,
+        "bbox": [
+          1501.6129150390625,
+          994.951416015625,
+          1619.3548583984375,
+          1020.710693359375
+        ],
+        "text": "UNITED STATERDEP"
+      },
+      {
+        "index": 15,
+        "confidence": 0.9524,
+        "bbox": [
+          1330.6451416015625,
+          1022.3206176757812,
+          1658.0645751953125,
+          1043.25
+        ],
+        "text": "P<USAFLORES<<KATHERINE<<<<<"
+      }
+    ]
+  },
+  "female_2.jpg": {
+    "status": "partial",
+    "classification": "passport_td3",
+    "active_engine": "rapidocr_onnxruntime",
+    "detected_blocks_count": 27,
+    "mean_confidence": 0.908,
+    "duration_ms": 6187.35,
+    "resized": true,
+    "fields": {
+      "document_type": {
+        "field_name": "document_type",
+        "label": "Document Type",
+        "value": "P",
+        "raw_evidence": "MRZ:P | VIZ:PASSPORT",
+        "source": "reconciled",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9461,
+        "reconciliation_status": "matched",
+        "mrz_value": "P",
+        "viz_value": "P",
+        "notes": [
+          "Extracted from document header line."
+        ]
+      },
+      "issuing_country": {
+        "field_name": "issuing_country",
+        "label": "Issuing Country / Authority",
+        "value": "USA",
+        "raw_evidence": "MRZ:USA | VIZ:USA",
+        "source": "reconciled",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.8622,
+        "reconciliation_status": "matched",
+        "mrz_value": "USA",
+        "viz_value": "USA",
+        "notes": [
+          "Extracted from standard ISO country code in VIZ."
+        ]
+      },
+      "surname": {
+        "field_name": "surname",
+        "label": "Surname",
+        "value": "KING",
+        "raw_evidence": "MRZ:KING | VIZ:KING",
+        "source": "reconciled",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9487,
+        "reconciliation_status": "matched",
+        "mrz_value": "KING",
+        "viz_value": "KING",
+        "notes": [
+          "Extracted via standard passport layout (top name line)."
+        ]
+      },
+      "given_names": {
+        "field_name": "given_names",
+        "label": "Given Names",
+        "value": "CYNTHIA",
+        "raw_evidence": "MRZ:YNTHIA | VIZ:CYNTHIA",
+        "source": "viz",
+        "validation_state": "conflict",
+        "ocr_confidence": 0.9459,
+        "reconciliation_status": "mismatch",
+        "mrz_value": "YNTHIA",
+        "viz_value": "CYNTHIA",
+        "notes": [
+          "Extracted via standard passport layout (second name line).",
+          "Discrepancy detected: MRZ parsed 'YNTHIA' while VIZ extracted 'CYNTHIA'."
+        ]
+      },
+      "full_name": {
+        "field_name": "full_name",
+        "label": "Full Name",
+        "value": "CYNTHIA KING",
+        "raw_evidence": "MRZ:YNTHIA KING | VIZ:CYNTHIA KING",
+        "source": "viz",
+        "validation_state": "conflict",
+        "ocr_confidence": 0.9473,
+        "reconciliation_status": "mismatch",
+        "mrz_value": "YNTHIA KING",
+        "viz_value": "CYNTHIA KING",
+        "notes": [
+          "Derived from VIZ given_names and surname.",
+          "Discrepancy detected: MRZ parsed 'YNTHIA KING' while VIZ extracted 'CYNTHIA KING'."
+        ]
+      },
+      "passport_number": {
+        "field_name": "passport_number",
+        "label": "Passport Number",
+        "value": "J17236842",
+        "raw_evidence": "MRZ:J17236842 | VIZ:J17236842",
+        "source": "reconciled",
+        "validation_state": "valid_check_digit",
+        "ocr_confidence": 0.951,
+        "reconciliation_status": "matched",
+        "mrz_value": "J17236842",
+        "viz_value": "J17236842",
+        "notes": [
+          "Extracted from standalone passport number format in VIZ."
+        ]
+      },
+      "nationality": {
+        "field_name": "nationality",
+        "label": "Nationality",
+        "value": "USA",
+        "raw_evidence": "MRZ:USA | VIZ:Nationality/Nationalite/Nacio",
+        "source": "mrz",
+        "validation_state": "conflict",
+        "ocr_confidence": 0.8796,
+        "reconciliation_status": "mismatch",
+        "mrz_value": "USA",
+        "viz_value": "NATIONALITENACIO",
+        "notes": [
+          "Extracted from inline VIZ label-value line.",
+          "Discrepancy detected: MRZ parsed 'USA' while VIZ extracted 'NATIONALITENACIO'."
+        ]
+      },
+      "date_of_birth": {
+        "field_name": "date_of_birth",
+        "label": "Date of Birth",
+        "value": "1965-06-10",
+        "raw_evidence": "MRZ:1965-06-10 | VIZ:10JUN1965",
+        "source": "reconciled",
+        "validation_state": "valid_check_digit",
+        "ocr_confidence": 0.948,
+        "reconciliation_status": "matched",
+        "mrz_value": "1965-06-10",
+        "viz_value": "1965-06-10",
+        "notes": [
+          "Extracted via standard passport layout (positioned above place of birth)."
+        ]
+      },
+      "sex": {
+        "field_name": "sex",
+        "label": "Sex",
+        "value": "F",
+        "raw_evidence": "MRZ:F | VIZ:ex/Sexe/Sexo -> TEXAS.USA",
+        "source": "mrz",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9043,
+        "reconciliation_status": "mrz_only",
+        "mrz_value": "F",
+        "viz_value": null,
+        "notes": [
+          "Unrecognized sex marker candidate."
+        ]
+      },
+      "date_of_expiry": {
+        "field_name": "date_of_expiry",
+        "label": "Date of Expiry",
+        "value": "2035-10-21",
+        "raw_evidence": "MRZ:2035-10-21 | VIZ:21OCT2035",
+        "source": "reconciled",
+        "validation_state": "valid_check_digit",
+        "ocr_confidence": 0.9357,
+        "reconciliation_status": "matched",
+        "mrz_value": "2035-10-21",
+        "viz_value": "2035-10-21",
+        "notes": [
+          "Extracted via standard passport layout (later date below place of birth)."
+        ]
+      },
+      "date_of_issue": {
+        "field_name": "date_of_issue",
+        "label": "Date of Issue",
+        "value": "2025-10-21",
+        "raw_evidence": "VIZ:21OCT2025",
+        "source": "viz",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9871,
+        "reconciliation_status": "not_checked",
+        "mrz_value": null,
+        "viz_value": "2025-10-21",
+        "notes": [
+          "Extracted via standard passport layout (earlier date below place of birth)."
+        ]
+      },
+      "place_of_birth": {
+        "field_name": "place_of_birth",
+        "label": "Place of Birth",
+        "value": "TEXAS, USA",
+        "raw_evidence": "VIZ:TEXAS.USA",
+        "source": "viz",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9795,
+        "reconciliation_status": "not_checked",
+        "mrz_value": null,
+        "viz_value": "TEXAS, USA",
+        "notes": [
+          "Extracted from place of birth format in VIZ."
+        ]
+      },
+      "personal_number": {
+        "field_name": "personal_number",
+        "label": "Personal / Optional Number",
+        "value": null,
+        "raw_evidence": null,
+        "source": "unavailable",
+        "validation_state": "missing",
+        "ocr_confidence": null,
+        "reconciliation_status": "insufficient_data",
+        "mrz_value": null,
+        "viz_value": null,
+        "notes": [
+          "Optional personal number label not detected."
+        ]
+      }
+    },
+    "mrz": {
+      "detected": true,
+      "format": "MrzFormat.TD3",
+      "all_check_digits_valid": true,
+      "mrz_text": "P<USAKING<<YNTHIA<<<<<<<<<<<<<<<<<<<<<<<<<<<\nJ172368422USA6506102F3510214<<<<<<<<<<<<<<06",
+      "errors": [],
+      "raw_lines": [
+        "P<USAKING<<YNTHIA<<<<<<<<<<<<<<<<<<<<<<<<<<",
+        "J172368422USA6506102F3510214<<<<<<<<<<<<<<06"
+      ]
+    },
+    "reconciliation": {
+      "overall_status": "mismatch",
+      "matched_count": 6,
+      "compared_fields_count": 9,
+      "mismatch_count": 3
+    },
+    "ocr_blocks": [
+      {
+        "index": 0,
+        "confidence": 0.8596,
+        "bbox": [
+          1487.0968017578125,
+          491.9866027832031,
+          1754.8387451171875,
+          517.3794555664062
+        ],
+        "text": "rsentents/MentiorsSpeciales/Anotaciones"
+      },
+      {
+        "index": 1,
+        "confidence": 0.6194,
+        "bbox": [
+          1404.8387451171875,
+          509.4441833496094,
+          1651.6129150390625,
+          533.25
+        ],
+        "text": "iwitxmnafyourdtefdep"
+      },
+      {
+        "index": 2,
+        "confidence": 0.8858,
+        "bbox": [
+          1716.1290283203125,
+          518.9664916992188,
+          1777.4193115234375,
+          530.0758666992188
+        ],
+        "text": "bedeniede"
+      },
+      {
+        "index": 3,
+        "confidence": 0.9737,
+        "bbox": [
+          1285.48388671875,
+          987.1472778320312,
+          1912.9031982421875,
+          1029.997802734375
+        ],
+        "text": "SIGNATUREOFBEARER/SIGNATUREDUTITULAIRE/FIRMADELTITULAR"
+      },
+      {
+        "index": 4,
+        "confidence": 0.9879,
+        "bbox": [
+          1224.193603515625,
+          1082.3704833984375,
+          1335.48388671875,
+          1109.3504638671875
+        ],
+        "text": "PASSPORT"
+      },
+      {
+        "index": 5,
+        "confidence": 0.9424,
+        "bbox": [
+          1435.48388671875,
+          1083.95751953125,
+          2008.0645751953125,
+          1129.982177734375
+        ],
+        "text": "THIEUNLTEDSTATESOFAMIERICA"
+      },
+      {
+        "index": 6,
+        "confidence": 0.9438,
+        "bbox": [
+          1195.1612548828125,
+          1099.828125,
+          1362.9031982421875,
+          1129.982177734375
+        ],
+        "text": "PASSEPORT/PASAPORTE"
+      },
+      {
+        "index": 7,
+        "confidence": 0.7973,
+        "bbox": [
+          1429.0322265625,
+          1133.15625,
+          1529.0322265625,
+          1160.1361083984375
+        ],
+        "text": "TyperTypefTipo"
+      },
+      {
+        "index": 8,
+        "confidence": 0.8232,
+        "bbox": [
+          1524.193603515625,
+          1129.982177734375,
+          1658.0645751953125,
+          1160.1361083984375
+        ],
+        "text": "CodelCodeiCodigo"
+      },
+      {
+        "index": 9,
+        "confidence": 0.7571,
+        "bbox": [
+          1664.51611328125,
+          1134.7432861328125,
+          1950.0,
+          1163.310302734375
+        ],
+        "text": "PasspoNoNoduPapor/No.dPasor"
+      },
+      {
+        "index": 10,
+        "confidence": 0.8201,
+        "bbox": [
+          1204.8387451171875,
+          1152.200927734375,
+          1330.6451416015625,
+          1201.3995361328125
+        ],
+        "text": "USA"
+      },
+      {
+        "index": 11,
+        "confidence": 0.9196,
+        "bbox": [
+          1462.9031982421875,
+          1155.375,
+          1498.3870849609375,
+          1179.1807861328125
+        ],
+        "text": "P"
+      },
+      {
+        "index": 12,
+        "confidence": 0.9718,
+        "bbox": [
+          1574.193603515625,
+          1153.7879638671875,
+          1629.0322265625,
+          1182.3548583984375
+        ],
+        "text": "USA"
+      },
+      {
+        "index": 13,
+        "confidence": 0.9978,
+        "bbox": [
+          1737.0968017578125,
+          1155.375,
+          1898.3870849609375,
+          1198.2254638671875
+        ],
+        "text": "J17236842"
+      },
+      {
+        "index": 14,
+        "confidence": 0.9931,
+        "bbox": [
+          1411.290283203125,
+          1204.5736083984375,
+          1479.0322265625,
+          1233.140625
+        ],
+        "text": "KING"
+      },
+      {
+        "index": 15,
+        "confidence": 0.9875,
+        "bbox": [
+          1412.9031982421875,
+          1241.0758056640625,
+          1517.741943359375,
+          1275.9910888671875
+        ],
+        "text": "CYNTHIA"
+      },
+      {
+        "index": 16,
+        "confidence": 0.8549,
+        "bbox": [
+          1454.8387451171875,
+          1275.9910888671875,
+          1620.9677734375,
+          1296.6226806640625
+        ],
+        "text": "Nationality/Nationalite/Nacio"
+      },
+      {
+        "index": 17,
+        "confidence": 0.9846,
+        "bbox": [
+          1451.6129150390625,
+          1287.1004638671875,
+          1701.6129150390625,
+          1322.015625
+        ],
+        "text": "UNITEDSTATESOFAMERICA"
+      },
+      {
+        "index": 18,
+        "confidence": 0.9917,
+        "bbox": [
+          1453.225830078125,
+          1317.25439453125,
+          1606.45166015625,
+          1356.9307861328125
+        ],
+        "text": "10JUN1965"
+      },
+      {
+        "index": 19,
+        "confidence": 0.8245,
+        "bbox": [
+          1612.9031982421875,
+          1314.080322265625,
+          1701.6129150390625,
+          1333.125
+        ],
+        "text": "ncelFecha den"
+      },
+      {
+        "index": 20,
+        "confidence": 0.8748,
+        "bbox": [
+          1459.677490234375,
+          1352.1695556640625,
+          1540.3226318359375,
+          1368.0401611328125
+        ],
+        "text": "ex/Sexe/Sexo"
+      },
+      {
+        "index": 21,
+        "confidence": 0.9795,
+        "bbox": [
+          1451.6129150390625,
+          1390.2589111328125,
+          1614.51611328125,
+          1431.5223388671875
+        ],
+        "text": "TEXAS.USA"
+      },
+      {
+        "index": 22,
+        "confidence": 0.9871,
+        "bbox": [
+          1450.0,
+          1428.34814453125,
+          1601.6129150390625,
+          1469.611572265625
+        ],
+        "text": "21OCT2025"
+      },
+      {
+        "index": 23,
+        "confidence": 0.9672,
+        "bbox": [
+          1450.0,
+          1468.0245361328125,
+          1598.3870849609375,
+          1504.5267333984375
+        ],
+        "text": "21OCT2035"
+      },
+      {
+        "index": 24,
+        "confidence": 0.9635,
+        "bbox": [
+          1446.774169921875,
+          1507.7008056640625,
+          1800.0,
+          1545.7901611328125
+        ],
+        "text": "UNITED STATESDEPARTMENTOFSTATE"
+      },
+      {
+        "index": 25,
+        "confidence": 0.8889,
+        "bbox": [
+          1196.774169921875,
+          1537.8548583984375,
+          1979.0322265625,
+          1583.87939453125
+        ],
+        "text": "P<USAKING<<YNTHIA<<<<<<<<<<<<<<<<<<<<<<<<<<"
+      },
+      {
+        "index": 26,
+        "confidence": 0.9197,
+        "bbox": [
+          1196.774169921875,
+          1582.2923583984375,
+          1980.6451416015625,
+          1626.7298583984375
+        ],
+        "text": "J172368422USA6506102F3510214<<<<<<<<<<<<<<06"
+      }
+    ]
+  },
+  "1_QKnoCEqXCvRY1fQTJ5q0lQ.png": {
+    "status": "partial",
+    "classification": "unclassified_document",
+    "active_engine": "rapidocr_onnxruntime",
+    "detected_blocks_count": 13,
+    "mean_confidence": 0.9549,
+    "duration_ms": 4284.98,
+    "resized": false,
+    "fields": {
+      "document_type": {
+        "field_name": "document_type",
+        "label": "Document Type",
+        "value": "RESIDENCE PERMIT",
+        "raw_evidence": "VIZ:RESIDENCE PERMIT",
+        "source": "viz",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9616,
+        "reconciliation_status": "viz_only",
+        "mrz_value": null,
+        "viz_value": "RESIDENCE PERMIT",
+        "notes": [
+          "Extracted from document header line."
+        ]
+      },
+      "issuing_country": {
+        "field_name": "issuing_country",
+        "label": "Issuing Country / Authority",
+        "value": null,
+        "raw_evidence": null,
+        "source": "unavailable",
+        "validation_state": "missing",
+        "ocr_confidence": null,
+        "reconciliation_status": "insufficient_data",
+        "mrz_value": null,
+        "viz_value": null,
+        "notes": [
+          "Issuing authority label or candidate not detected."
+        ]
+      },
+      "surname": {
+        "field_name": "surname",
+        "label": "Surname",
+        "value": "SHARMA",
+        "raw_evidence": "VIZ:HAME -> SHARMA",
+        "source": "viz",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9629,
+        "reconciliation_status": "viz_only",
+        "mrz_value": null,
+        "viz_value": "SHARMA",
+        "notes": [
+          "Extracted via spatial label-to-value alignment in VIZ."
+        ]
+      },
+      "given_names": {
+        "field_name": "given_names",
+        "label": "Given Names",
+        "value": "AKSHAY",
+        "raw_evidence": "VIZ:AKSHAY",
+        "source": "viz",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9814,
+        "reconciliation_status": "viz_only",
+        "mrz_value": null,
+        "viz_value": "AKSHAY",
+        "notes": [
+          "Extracted from name candidate in VIZ."
+        ]
+      },
+      "full_name": {
+        "field_name": "full_name",
+        "label": "Full Name",
+        "value": "AKSHAY SHARMA",
+        "raw_evidence": "VIZ:AKSHAY SHARMA",
+        "source": "derived",
+        "validation_state": "valid_format",
+        "ocr_confidence": 0.9722,
+        "reconciliation_status": "viz_only",
+        "mrz_value": null,
+        "viz_value": "AKSHAY SHARMA",
+        "notes": [
+          "Derived from VIZ given_names and surname."
+        ]
+      },
+      "passport_number": {
+        "field_name": "passport_number",
+        "label": "Passport Number",
+        "value": null,
+        "raw_evidence": null,
+        "source": "unavailable",
+        "validation_state": "missing",
+        "ocr_confidence": null,
+        "reconciliation_status": "insufficient_data",
+        "mrz_value": null,
+        "viz_value": null,
+        "notes": [
+          "Passport number label or candidate not detected."
+        ]
+      },
+      "nationality": {
+        "field_name": "nationality",
+        "label": "Nationality",
+        "value": null,
+        "raw_evidence": null,
+        "source": "unavailable",
+        "validation_state": "missing",
+        "ocr_confidence": null,
+        "reconciliation_status": "insufficient_data",
+        "mrz_value": null,
+        "viz_value": null,
+        "notes": [
+          "Nationality label or candidate not detected."
+        ]
+      },
+      "date_of_birth": {
+        "field_name": "date_of_birth",
+        "label": "Date of Birth",
+        "value": null,
+        "raw_evidence": null,
+        "source": "unavailable",
+        "validation_state": "missing",
+        "ocr_confidence": null,
+        "reconciliation_status": "insufficient_data",
+        "mrz_value": null,
+        "viz_value": null,
+        "notes": [
+          "Date of birth label or candidate not detected."
+        ]
+      },
+      "sex": {
+        "field_name": "sex",
+        "label": "Sex",
+        "value": null,
+        "raw_evidence": null,
+        "source": "unavailable",
+        "validation_state": "missing",
+        "ocr_confidence": null,
+        "reconciliation_status": "insufficient_data",
+        "mrz_value": null,
+        "viz_value": null,
+        "notes": [
+          "Sex marker label not detected and no reliable layout position found."
+        ]
+      },
+      "date_of_expiry": {
+        "field_name": "date_of_expiry",
+        "label": "Date of Expiry",
+        "value": null,
+        "raw_evidence": null,
+        "source": "unavailable",
+        "validation_state": "missing",
+        "ocr_confidence": null,
+        "reconciliation_status": "insufficient_data",
+        "mrz_value": null,
+        "viz_value": null,
+        "notes": [
+          "Date of expiration label or candidate not detected."
+        ]
+      },
+      "date_of_issue": {
+        "field_name": "date_of_issue",
+        "label": "Date of Issue",
+        "value": null,
+        "raw_evidence": "VIZ:PLACE AND DATE DF ISSUE -> TYPEOFPEEMI",
+        "source": "unavailable",
+        "validation_state": "unverified",
+        "ocr_confidence": null,
+        "reconciliation_status": "not_checked",
+        "mrz_value": null,
+        "viz_value": null,
+        "notes": [
+          "Unrecognized date format."
+        ]
+      },
+      "place_of_birth": {
+        "field_name": "place_of_birth",
+        "label": "Place of Birth",
+        "value": null,
+        "raw_evidence": null,
+        "source": "unavailable",
+        "validation_state": "missing",
+        "ocr_confidence": null,
+        "reconciliation_status": "not_checked",
+        "mrz_value": null,
+        "viz_value": null,
+        "notes": [
+          "Place of birth label or candidate not detected."
+        ]
+      },
+      "personal_number": {
+        "field_name": "personal_number",
+        "label": "Personal / Optional Number",
+        "value": null,
+        "raw_evidence": null,
+        "source": "unavailable",
+        "validation_state": "missing",
+        "ocr_confidence": null,
+        "reconciliation_status": "insufficient_data",
+        "mrz_value": null,
+        "viz_value": null,
+        "notes": [
+          "Optional personal number label not detected."
+        ]
+      }
+    },
+    "mrz": {
+      "detected": false,
+      "format": "None",
+      "all_check_digits_valid": false,
+      "mrz_text": null,
+      "errors": [],
+      "raw_lines": []
+    },
+    "reconciliation": {
+      "overall_status": "insufficient_data",
+      "matched_count": 0,
+      "compared_fields_count": 0,
+      "mismatch_count": 0
+    },
+    "ocr_blocks": [
+      {
+        "index": 0,
+        "confidence": 0.9616,
+        "bbox": [
+          533.0,
+          99.0,
+          951.0,
+          152.0
+        ],
+        "text": "RESIDENCE PERMIT"
+      },
+      {
+        "index": 1,
+        "confidence": 0.9622,
+        "bbox": [
+          529.0,
+          189.0,
+          584.0,
+          211.0
+        ],
+        "text": "HAME"
+      },
+      {
+        "index": 2,
+        "confidence": 0.9636,
+        "bbox": [
+          527.0,
+          209.0,
+          683.0,
+          252.0
+        ],
+        "text": "SHARMA"
+      },
+      {
+        "index": 3,
+        "confidence": 0.9814,
+        "bbox": [
+          527.0,
+          246.0,
+          672.0,
+          286.0
+        ],
+        "text": "AKSHAY"
+      },
+      {
+        "index": 4,
+        "confidence": 0.9617,
+        "bbox": [
+          524.0,
+          295.0,
+          640.0,
+          326.0
+        ],
+        "text": "VALIDUNTIL"
+      },
+      {
+        "index": 5,
+        "confidence": 0.9064,
+        "bbox": [
+          524.0,
+          362.0,
+          765.0,
+          397.0
+        ],
+        "text": "PLACE AND DATE DF ISSUE"
+      },
+      {
+        "index": 6,
+        "confidence": 0.946,
+        "bbox": [
+          522.0,
+          446.0,
+          661.0,
+          474.0
+        ],
+        "text": "TYPEOFPEEMI"
+      },
+      {
+        "index": 7,
+        "confidence": 0.9651,
+        "bbox": [
+          523.0,
+          473.0,
+          882.0,
+          513.0
+        ],
+        "text": "T1MIGRANTTALENT"
+      },
+      {
+        "index": 8,
+        "confidence": 0.9907,
+        "bbox": [
+          522.0,
+          508.0,
+          825.0,
+          549.0
+        ],
+        "text": "LEAVETOENTER"
+      },
+      {
+        "index": 9,
+        "confidence": 0.8156,
+        "bbox": [
+          518.0,
+          566.0,
+          605.0,
+          593.0
+        ],
+        "text": "REMARRS"
+      },
+      {
+        "index": 10,
+        "confidence": 0.9898,
+        "bbox": [
+          518.0,
+          592.0,
+          870.0,
+          632.0
+        ],
+        "text": "RESTRICTEDWORK"
+      },
+      {
+        "index": 11,
+        "confidence": 0.9782,
+        "bbox": [
+          517.0,
+          627.0,
+          842.0,
+          662.0
+        ],
+        "text": "NODR/DENTRAIN"
+      },
+      {
+        "index": 12,
+        "confidence": 0.9916,
+        "bbox": [
+          516.0,
+          658.0,
+          873.0,
+          698.0
+        ],
+        "text": "ORSPORTSPERSON"
+      }
+    ]
+  }
+}
