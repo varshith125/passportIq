@@ -225,3 +225,19 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 | **Live Health Probe** | `http://127.0.0.1:8000/health/live` | Process liveness check |
 | **Readiness Health Probe** | `http://127.0.0.1:8000/health/ready` | OCR engine readiness check |
 | **Extraction Endpoint** | `POST /api/passports/extract` | Multipart image extraction |
+
+---
+
+## 9. Desktop GUI (.exe) Operations
+
+### Running the Desktop GUI Directly
+```powershell
+python desktop_main.py
+```
+This automatically starts the backend server in the background and opens the native Windows application window.
+
+### Building the Standalone .exe
+```powershell
+pyinstaller --noconfirm passportiq.spec
+```
+The output directory will be in `dist/PassportIQ/`, with the executable `PassportIQ.exe` and compressed package `PassportIQ-Windows-x64.zip`.

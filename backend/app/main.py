@@ -83,6 +83,23 @@ def create_app(settings: Settings | None = None) -> FastAPI:
 
     app.include_router(health_router)
     app.include_router(passports_router)
+
+    # Mount frontend static distribution if available (bundled in PyInstaller or built locally)
+    import os
+    import sys
+    from fastapi.staticfiles import StaticFiles
+
+    candidate_dist_dirs = [
+        os.path.join(getattr(sys, "_MEIPASS", ""), "frontend_dist") if getattr(sys, "_MEIPASS", None) else None,
+        os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "frontend", "dist")),
+        os.path.abspath(os.path.join(os.getcwd(), "frontend", "dist")),
+    ]
+    for dist_dir in candidate_dist_dirs:
+        if dist_dir and os.path.isdir(dist_dir) and os.path.exists(os.path.join(dist_dir, "index.html")):
+            logger.info("Serving frontend static assets from: %s", dist_dir)
+            app.mount("/", StaticFiles(directory=dist_dir, html=True), name="static_frontend")
+            break
+
     return app
 
 

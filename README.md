@@ -55,11 +55,28 @@ passportiq-v2/
 └── RUNBOOK.md
 ```
 
+## Windows Desktop GUI (.exe) Application
+
+PassPortIQ v2 can be run directly as a standalone Windows desktop GUI executable with no Python or Node.js installation required.
+
+### Download Directly from GitHub
+* **Latest GitHub Release (.exe & .zip)**: [https://github.com/varshith125/passportIq/releases/latest](https://github.com/varshith125/passportIq/releases/latest)
+* Download `PassportIQ-Windows-x64.zip`, extract it anywhere, and double-click `PassportIQ.exe` to launch the native desktop GUI!
+
+### Local Run & Build
+* **Run GUI locally**:
+  ```powershell
+  python desktop_main.py
+  ```
+* **Build `.exe` with PyInstaller**:
+  ```powershell
+  pyinstaller --noconfirm passportiq.spec
+  ```
+  The compiled executable will be placed in `dist/PassportIQ/PassportIQ.exe`.
+
+---
+
 ## Installation & Startup Instructions
-
-> **Quick Start**: See the dedicated [Operations Runbook](file:///c:/Users/varsh/Downloads/passportiq-v2/RUNBOOK.md) for copy-paste execution commands and troubleshooting.
-
-### 1. Backend Setup
 
 #### Linux / macOS
 
